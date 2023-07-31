@@ -1,13 +1,19 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps } from 'next';
+import PublicFiles from '@/components/PublicFiles';
+import ExteranllySharedFiles from '@/components/ExteranllySharedFiles';
+import PeopleWithAccess from '@/components/PeopleWithAccess';
+import ReportHeader from '@/components/ReportHeader';
+import StatSection from '@/components/StatSection';
 
-const inter = Inter({ subsets: ['latin'] })
 
 const Dashboard = () => {
   return (
     <main>
-
+      <ReportHeader />
+      <StatSection />
+      <PublicFiles />
+      <ExteranllySharedFiles />
+      <PeopleWithAccess />
     </main>
   )
 }

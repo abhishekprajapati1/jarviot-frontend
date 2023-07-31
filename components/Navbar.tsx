@@ -1,12 +1,19 @@
 import Link from 'next/link'
 import { BsLinkedin } from 'react-icons/bs';
-import { FaSquareTwitter } from 'react-icons/fa6'
+import { FaSquareTwitter } from 'react-icons/fa6';
+import useRevokeToken from '@/core/mutations/useRevokeToken';
 
 const Navbar = () => {
+    const { mutate: revokeToken, isLoading: isRevoking } = useRevokeToken();
+
+
+
+
+
     return (
         <nav className='h-[80px] flex items-center w-full'>
             <div className='w-full'>
-                <button className='border-2 border-white text-white font-bold px-4 py-2 rounded-md'>
+                <button disabled={isRevoking} onClick={() => revokeToken()} className='border-2 border-white text-white font-bold px-4 py-2 rounded-md'>
                     Revoke Access
                 </button>
             </div>

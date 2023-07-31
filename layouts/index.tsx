@@ -10,7 +10,7 @@ const Layout = ({ children }: IWrapper) => {
                 <Navbar />
                 <div className="flex items-center gap-3 text-gray-200 mt-20 mb-2">
                     <FiLock />
-                    <span>We do not scan the content of files. Scan results are never stored.</span>
+                    <span>We don't scan the files' contents. Scan output is never preserved.</span>
                 </div>
                 <main className="flex-grow bg-white rounded-xl">
                     {children}
