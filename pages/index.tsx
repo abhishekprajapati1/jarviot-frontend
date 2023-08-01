@@ -12,8 +12,8 @@ const Dashboard = () => {
       <ReportHeader />
       <StatSection />
       <PublicFiles />
-      <ExteranllySharedFiles />
       <PeopleWithAccess />
+      <ExteranllySharedFiles />
     </main>
   )
 }

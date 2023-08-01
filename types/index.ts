@@ -13,3 +13,13 @@ export type CardType = {
     para: string;
     color: string;
 }
+
+export type FileTypes = {
+    createdBy: string;
+    id: string;
+    mimeType: string;
+    name: string;
+    owners: {displayName?: string; emailAddress?:string; kind?: string; me?: boolean; permissionId?: string; photoLink?: string }[];
+    sharedWith: string[];
+    webViewLink: string;
+}
